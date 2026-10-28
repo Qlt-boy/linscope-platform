@@ -1,0 +1,9 @@
+# 后端运行依赖（精确锁定，保证内网重新构建时版本一致）
+fastapi==0.153.0
+uvicorn[standard]==0.54.0
+openpyxl==3.1.5
+python-docx==1.2.0
+reportlab==5.0.1
+pillow==13.0.0
+paramiko==5.1.0
+cryptography==50.0.2

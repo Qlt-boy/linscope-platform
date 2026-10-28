@@ -1,0 +1,1 @@
+# -*- coding: utf-8 -*-\n"""LinScopePlatform 后端（FastAPI）。"""\n\n__version__ = "1.3.0"\n

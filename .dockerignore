@@ -1,0 +1,12 @@
+# Docker build context exclusions
+backend/.venv
+backend/data
+backend/.env
+backend/**/__pycache__
+backend/**/*.pyc
+backend/**/*.log
+frontend/_patch5
+docs
+reports-out
+.git
+.gitignore

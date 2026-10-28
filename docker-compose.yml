@@ -1,0 +1,45 @@
+services:
+  linscope-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://mirrors.aliyun.com/pypi/simple/}
+    image: linscope-platform:1.3.0
+    container_name: linscope-platform
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${LINSCOPE_PORT:-1314}:1314"
+    environment:
+      TZ: Asia/Shanghai
+      NIP_PORT: "1314"
+      NIP_TEST_LAB_ENABLED: ${NIP_TEST_LAB_ENABLED:-0}
+      NIP_TLS_ENABLED: "1"
+      NIP_TLS_CERT: /app/backend/data/tls/server.crt
+      NIP_TLS_KEY: /app/backend/data/tls/server.key
+      NIP_TLS_HOSTS: ${NIP_TLS_HOSTS:-localhost,127.0.0.1,server,localhost}
+      NIP_AUTO_BACKUP_HOURS: ${NIP_AUTO_BACKUP_HOURS:-24}
+      NIP_BACKUP_KEEP: ${NIP_BACKUP_KEEP:-7}
+      NIP_ADMIN_PASSWORD: ${NIP_ADMIN_PASSWORD:-}
+      SITE_NAME: ${SITE_NAME:-林鉴知微平台 | LinScopePlatform}
+      ORG_NAME: ${ORG_NAME:-林鉴知微技术服务股份有限公司 · 网络运维中心}
+      PERIOD_DAYS: ${PERIOD_DAYS:-7}
+      CACHE_TTL: ${CACHE_TTL:-20}
+    volumes:
+      - linscope-data:/app/backend/data
+    healthcheck:
+      test: ["CMD", "curl", "-kfsS", "https://127.0.0.1:1314/api/system/health"]
+      interval: 30s
+      timeout: 8s
+      retries: 3
+      start_period: 30s
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+volumes:
+  linscope-data:
+    name: linscope-platform-data

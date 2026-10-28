@@ -1,0 +1,117 @@
+/* ============ 设计令牌（严格对齐设计稿） ============ */
+:root {
+  /* 尺寸 */
+  --sidebar-w: 248px;
+  --pad-sidebar: 20px;
+  --gap-sidebar: 6px;
+  --pad-content: 28px;
+  --gap-content: 18px;
+  --gap-content-compact: 16px;
+  --pad-card: 20px;
+  --gap-card: 14px;
+  --gap-kpi: 16px;
+  --row-h: 40px;
+  --row-h-lg: 44px;
+  --cell-pad: 16px;
+
+  /* 圆角 */
+  --r-card: 16px;
+  --r-nav: 12px;
+  --r-control: 10px;
+  --r-pill: 12px;
+  --r-row: 8px;
+
+  /* 字体 */
+  --font-sans: "Noto Sans SC", "Sarasa Gothic SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-num: "Inter", "Helvetica Neue", Arial, var(--font-sans);
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Courier New", monospace;
+
+  /* 阴影 */
+  --shadow-modal: 0 24px 56px rgba(32, 33, 36, 0.22);
+  --shadow-drawer: -12px 0 48px rgba(32, 33, 36, 0.28);
+  --shadow-dialog: 0 16px 40px rgba(32, 33, 36, 0.18);
+}
+
+/* ---------- 浅色主题 ---------- */
+[data-theme="light"] {
+  --bg-app: #F7F8FC;
+  --bg-sidebar: #EEF1F8;
+  --surface: #FFFFFF;
+  --surface-subtle: #F8F9FC;
+  --surface-hover: #F1F3F4;
+  --surface-sunken: #F7F8FC;
+
+  --border: #E5E7EB;
+  --border-strong: #DADCE0;
+  --border-input: #DADCE0;
+
+  --text-1: #202124;
+  --text-2: #5F6368;
+  --text-3: #9AA0A6;
+
+  --brand: #1A73E8;
+  --brand-contrast: #FFFFFF;
+  --brand-soft-bg: #F1F5FF;
+  --brand-soft-text: #1A73E8;
+
+  --success: #34A853;
+  --success-text: #137333;
+  --success-soft-bg: #E6F4EA;
+
+  --warning: #FBBC04;
+  --warning-text: #B06000;
+  --warning-soft-bg: #FEF7E0;
+  --warning-soft-text: #7A5B00;
+
+  --danger: #EA4335;
+  --danger-text: #C5221F;
+  --danger-soft-bg: #FCE8E6;
+
+  --neutral-soft-bg: #F1F3F4;
+  --chart-grid: #EDEFF3;
+  --mask: rgba(32, 33, 36, 0.45);
+}
+
+/* ---------- 深色主题 ---------- */
+[data-theme="dark"] {
+  --bg-app: #0F1116;
+  --bg-sidebar: #171A21;
+  --surface: #1E2230;
+  --surface-subtle: #222735;
+  --surface-hover: #262B36;
+  --surface-sunken: #262B36;
+
+  --border: #2A2F3A;
+  --border-strong: #4A5060;
+  --border-input: #5A6070;
+
+  --text-1: #E8EAED;
+  --text-2: #A0A6B0;
+  --text-3: #6E7480;
+
+  --brand: #4C8DFF;
+  --brand-contrast: #FFFFFF;
+  --brand-soft-bg: #16294D;
+  --brand-soft-text: #6EA1FF;
+
+  --success: #3DDC84;
+  --success-text: #3DDC84;
+  --success-soft-bg: #143021;
+
+  --warning: #FDD663;
+  --warning-text: #FDD663;
+  --warning-soft-bg: #2F2611;
+  --warning-soft-text: #FDD663;
+
+  --danger: #FF7A6B;
+  --danger-text: #FF7A6B;
+  --danger-soft-bg: #4A1B16;
+
+  --neutral-soft-bg: #2A2F3A;
+  --chart-grid: #2A2F3A;
+  --mask: rgba(0, 0, 0, 0.58);
+
+  --shadow-modal: 0 24px 56px rgba(0, 0, 0, 0.55);
+  --shadow-drawer: -12px 0 48px rgba(0, 0, 0, 0.5);
+  --shadow-dialog: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
