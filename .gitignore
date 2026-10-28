@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+backend/data/
+**/__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+*.sqlite*
+*.db
+*.log
+*.pem
+*.key
+**/fake_*host_key*
+backend/tools/inventory_devices_import.psv
